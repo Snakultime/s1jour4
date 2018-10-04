@@ -3,7 +3,7 @@ def journalistes
 end
 
 def nbr_de_journalist
- puts "Il y a #{@tableaujournalistes.size.to_i} journalistes dans la liste."
+ puts "Il y a #{@tableaujournalistes.size} journalistes dans la liste."
 end
 
 
@@ -14,7 +14,7 @@ array_journalist_number = []
 array_journalist_number.push handle
        end
        end
-       puts "il y a #{array_journalist_number.size.to_i} qui ont un chiffre dans leur pseudo twitter"
+       puts "il y a #{array_journalist_number.size} qui ont un chiffre dans leur pseudo twitter"
 end
 
 def search_aude
@@ -24,7 +24,7 @@ def search_aude
          aude.push handle
        end
        end
-       puts "Il y a #{aude.size.to_i} qui ont Aude dans leur nom."
+       puts "Il y a #{aude.size} qui ont Aude dans leur nom."
 end
 
 def search_maj
@@ -34,7 +34,7 @@ def search_maj
       cap.push handle
     end
   end
-  puts "Il y a #{cap.size.to_i} pseudos qui commence avec une majuscule."
+  puts "Il y a #{cap.size} pseudos qui commence avec une majuscule."
 end
 
 def contain_maj
@@ -44,7 +44,7 @@ def contain_maj
         maj.push handle
       end
     end
-    puts "Il y a #{maj.size.to_i} pseudos qui contiennent des majuscules."
+    puts "Il y a #{maj.size} pseudos qui contiennent des majuscules."
 end
 
 def search__
@@ -54,11 +54,11 @@ def search__
         space.push handle
       end
     end
-    puts "Il y a #{space.size.to_i} noms qui contiennent des _."
+    puts "Il y a #{space.size} noms qui contiennent des _."
 end
 
 def alph
-    puts @tableaujournalistes.sort
+    puts @tableaujournalistes.sort(&:casecmp)
 end
 
 def perform
